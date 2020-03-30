@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 RUN sed -i s/archive.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
 	sed -i s/security.ubuntu.com/mirrors.aliyun.com/g /etc/apt/sources.list && \
 	apt update && \
-	apt install -y cmake build-essential 
+	apt install -y cmake build-essential pkg-config 
 
 # 创建toolchain目录
 RUN mkdir -p /toolchain/arm-bcm2708
